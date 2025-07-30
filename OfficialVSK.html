@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>OfficialVSK</title>
+  <style>
+    body {
+      background-color: #fffdeb;
+      font-family: 'Georgia', serif;
+    }
+    nav {
+      background-color: #caa9f2;
+      display: flex;
+      display: flex;
+    justify-content: center; 
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-right: 5px;
+    margin-left: 5px; /* 5px from left edge */
+    margin-top: 20px;
+    padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 0 20px;
+    }
+    .profile{
+       margin-top: 100px;
+      margin-left: 150px;
+      position: relative;
+  
+    text-align: left; /* aligns text away from image */
+    padding-right: 280px; /* creates space for image on right */
+    }
+    .tags {
+      margin-top: 150px;
+      font-size: 1.5rem;
+      color: #a87ee2;
+    }
+    .name {
+      font-size: 7rem;
+      color: #b9a12c;
+      font-style: italic;
+      margin-top: 150px;
+      margin: 10px;
+    }
+    .profile-img {
+      position: absolute;
+  top: 0;
+  right: 150px;
+  border-radius: 50%;
+  width: 25%;
+  height: 250px;
+  object-fit: cover;
+  
+    }
+    .bookings-btn {
+      display: inline-block;
+      margin-top: 80px;
+      margin: 50px;
+      padding: 10px 25px;
+      border: 1px solid #e0d4f7;
+      border-radius: 20px;
+      color: #a87ee2;
+      font-size: 1.2rem;
+      right: 160px;
+      position: absolute;
+    }
+
+    .head1{
+    font-size: 2rem;
+      color: #b9a12c;
+      font-style: italic;
+      margin-left: 50px; 
+    }
+    .head2{
+     font-size: 2rem;
+      color: #b9a12c;
+      font-style: italic;
+      margin-left: 60px;    
+    }
+    .intro{
+      margin: 50px;
+      right: 50px;
+      position: absolute; 
+    }
+
+        .slide-container {
+      width: 400px;
+      height: 300px; 
+      margin: auto;
+      position: relative; 
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .slide.active {
+      display: block;
+    }
+
+    .head3{
+     font-size: 2rem;
+      color: #b9a12c;
+      font-style: italic;
+      margin-left: 20px;    
+    }
+    
+  .slideshow {
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-left: 10px;
+      position: left;
+       display: float;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .slides {
+      display: flex;
+      width: 200%; /* 2 slides, adjust as needed */
+      animation: slide 6s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+
+    @keyframes slide {
+      0%   { transform: translateX(0); }
+      50%  { transform: translateX(-40%); }
+      100% { transform: translateX(0); }
+    }
+    h2 {
+      margin-top: 100px;
+      margin: 50px;
+      font-size: 1.4rem;
+      right: 220px;
+      position: absolute; 
+    }
+    .worship-btn{
+      display: inline-block;
+      margin-top: 100px;
+      margin: 50px;
+      padding: 10px 25px;
+      border: 1px solid #e0d4f7;
+      border-radius: 20px;
+      color: #a87ee2;
+      font-size: 1.4rem;
+      right: 220px;
+      position: absolute;  
+    }
+    audio {
+      margin: 50px;
+      right: 220px;
+      position: absolute;  
+}
+
+  .OVSK-logo{
+ position: absolute;
+  
+  right: 5px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+ }
+
+ .book-img{
+ position: absolute;
+  right: 100px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+
+ }
+
+.bookings{
+  margin-top: 100px;
+    margin: 50px;
+    left: 300px;
+    position: absolute; 
+    font-size: 2rem;
+      color: #b9a12c;
+      font-style: italic;
+ }
+ .bookings-btn2 {
+      display: inline-block;
+      margin-top: 80px;
+      margin: 50px;
+      padding: 10px 25px;
+      border: 1px solid #e0d4f7;
+      border-radius: 20px;
+      color: #a87ee2;
+      font-size: 1.2rem;
+      left: 280px;
+      position: relative;
+    }
+.head4{
+  font-size: 2rem;
+      color: #b9a12c;
+      font-style: italic;
+      margin-left: 20px;    
+    }
+    .ovk-img{
+    position: relative;
+  left: 100px;
+  width: 190px;
+  height: 200px;
+  
+    }
+    .ovsk-img{
+      position: absolute;
+  right: 100px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+    }
+    .vsk-img{
+      position: relative;
+  left: 400px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+    }
+    .buy-btn{
+      display: inline-block;
+      margin-top: 50px;
+      margin: 50px;
+      padding: 10px 25px;
+      border: 1px solid #e0d4f7;
+      border-radius: 20px;
+      color: #a87ee2;
+      font-size: 1.3rem;
+      left: 300px;
+      position: relative;
+    }
+    .learn-btn{
+      display: inline-block;
+      margin-top: 80px;
+      margin: 50px;
+      padding: 10px 25px;
+      border: 1px solid #e0d4f7;
+      border-radius: 20px;
+      color: #a87ee2;
+      font-size: 1.2rem;
+      right: 250px;
+      position: absolute;
+    }
+
+  .head5{
+  font-size: 2rem;
+      color: solid black;
+      font-style: italic;
+      margin-left: 20px;    
+    }
+  .faqs{
+    margin-left: 20px;
+    font-size: 1.2rem;
+
+  }
+
+ .head6{
+  font-size: 2rem;
+      color: #b9a12c;
+      font-style: italic;
+      margin-left: 20px;    
+    }
+    .contacts{
+      font-size: 1rem;
+      color: #b9a12c;
+      margin-left: 20px;   
+    }
+ .info{
+  margin:20px;
+ }
+ .instagram-logo{
+  margin: 5px;
+  width: 50px;
+  height: 30px;
+ }
+ .youtube-logo{
+  margin: 10px;
+  width: 40px;
+  height: 30px;
+ }
+ .facebook-logo{
+  margin: 0px;
+  width: 60px;
+  height: 60px;
+ }
+ .tiktok-logo{
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+ }
+ .pic1-img{
+ position: absolute;
+  margin-top: 10px;
+  right: 300px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+ }
+ .pic2-img{
+  position: absolute;
+  margin-top: -10px;
+  right: 180px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+ }
+  </style>
+</head>
+<body>
+  <nav>
+   <a href="#">Minister</a>
+    <a href="#">Preaching</a>
+    <a href="#">Worship</a>
+  </nav>
+
+  <div class="profile">
+  <p class="tags">Worship Minister / Author / Testimony Carrier</p>
+  <div class="name">OfficialVSK</div>
+    <img src="images/Profilepic2.png" alt="Official VSK" class="profile-img" />
+  <br>
+    <a href="https://forms.gle/3rTVYvwdw5yucGzh7" class="bookings-btn">Bookings</a>
+  </div>
+  <br><br><br>
+  <br><br><br>
+  <br><br><br><br>
+  <p>
+  <div class="head1"><b>Announcements</b></div>
+   </p><br>
+<div class="slide-container">
+  <img src="images/Womens conference.jpg" class="slide active">
+  <img src="images/worship night.jpg" class="slide">
+
+</div>
+<script>
+  let autoIndex = 0;
+  const autoSlides = document.querySelectorAll(".slide");
+
+  function autoShowSlides() {
+    autoSlides.forEach(slide => slide.classList.remove("active"));
+    autoSlides[autoIndex].classList.add("active");
+    autoIndex = (autoIndex + 1) % autoSlides.length;
+    setTimeout(autoShowSlides, 3000); // Change slide every 3 seconds
+  }
+
+  window.onload = autoShowSlides;
+</script>
+<br><br>
+<br><br>
+<br>
+
+<div class="head2"><b>About Me</b></div>
+<br><br>
+<br><br>
+<div class="intro">
+<p><i>Greetings in the wonderful name of our Lord and saviour Jesus Christ<br> of Nazareth. This is your Minister Offiicial Vukosi Sono. I am here <br>where we do our ministry @officialvukosisono.
+  <br> Why the ministry Official Vukosi Sono? <br>Because I made a vow to God that when he had delivered me from the<br> kingdom of darkness where I have spent 13 years in the darkness where<br>
+   I was captured by the devil, that when God delivers me I
+  <br> will go out and speak about his presence and his power.<br><br>Check out all my social media pages at @Officialvukosisonokhiba. 
+<br><br>Thank you. </i></p></div>
+<video width="550" height="300" controls>
+  <source src="images\ovskintrovideo.mp4" type="video/mp4">
+</video>
+
+<br><br>
+<br><br>
+<br><br>
+<div class="head3"><b>Worship Ministry</b></div><br>
+<h2>Worship Ministry Channel:</h2><br>
+<br>
+<a href="https://www.youtube.com/@officialvukosisonokhiba" class="worship-btn">Worship In My Closet</a><br>
+<br><br>
+<br>
+<audio controls>
+  <source src="sound/Worship in my Closet Recording 1.MP3.mp3" type="audio/mpeg">
+</audio><br>
+<br><br>
+<audio controls>
+<source src="sound/Worship in my Closet Recording 2.MP3.mp3" type="audio/mpeg">
+</audio>
+   <div class="slideshow">
+  <div class="slides">
+    <img src="images/IMG-20250722-WA0009.jpg" alt="Image 2">
+  </div>
+</div>
+<br>
+<br>
+<br>
+<img src="images/Logowebsiteovsk.jpg" alt="OVSK logo" class="OVSK-logo">
+<br><br>
+<br><br>
+<br><br>
+<img src="images/bookings pic.jpg" alt="booking pic" class="book-img">
+<div class="bookings">
+<p>Bookings</p>
+</div><br>
+<br><br>
+<br><br>
+ <a href="https://forms.gle/3rTVYvwdw5yucGzh7" class="bookings-btn2">Register Now</a>
+ <br><br>
+ <br><br>
+ <br><br>
+ <br><br>
+ <br><br>
+ <br><br><br>
+
+ <div class="head4"><b>My Book</b></div>
+ <br>
+ <p><i>13 Years in The Dark World is the gripping true story of Vukosi Sono Khiba’s journey through spiritual captivity and ultimate deliverance. Trapped in the dark world for over a 
+  <br>decade, she unknowingly entered demonic covenants that manipulated her destiny. From spiritual initiations to assignments against the church, she unveils the hidden operations of 
+  <br>darkness. However, through the power of Jesus Christ, she finds redemption, breaks free from bondage and reclaims her life. This book is both a warning and a guide, revealing 
+  <br>the reality of spiritual warfare and the authority believers have in Christ. A testimony of transformation, it equips readers to discern, fight and walk in the freedom that only God 
+  <br>can give.</i></p>
+  <br>
+  <img src="images/Picsart_25-07-25_02-52-41-213.jpg" class="ovk-img"> 
+<img src="images/Picsart_25-07-25_02-53-25-591.jpg" class="ovsk-img">
+<img src="images/Picsart_25-07-25_02-58-10-828.jpg" class="vsk-img">
+<br>
+<a href="https://forms.gle/3rTVYvwdw5yucGzh7" class="buy-btn">Buy</a>
+<a href="https://forms.gle/3rTVYvwdw5yucGzh7" class="learn-btn">Learn More</a>
+ <br>
+ <br>
+<div class="head5"><b>FAQs</b></div>
+<br><br>
+<div class="faqs">
+<p><b>What type of ministry does Vukosi offer?</b><br>
+Vukosi ministers through worship, deliverance-focused teachings and testimony sharing.
+<br><br>
+<b>How do I stay updated with new content or ministry news?</b><br>
+You can follow Minister Vukosi on all social platforms (Instagram, Facebook, TikTok, YouTube) and join our WhatsApp Channel for real-time updates and behind-the-scenes moments.
+<br><br>
+<b>Does Vukosi offer one-on-one mentorship or counselling?</b><br>
+Yes, Vukosi offers private counselling and spiritual mentorship sessions for individuals seeking healing, guidance and deeper understanding of their spiritual journey. To book a session or inquire about availability, please email us.
+<br><br>
+<b>How can I support this ministry?</b>
+We appreciate all forms of support, from prayer to sharing content. If you’d like to give or partner financially, please contact us through our email for details.
+
+
+</p>
+</div>
+
+
+
+<br><br>
+ <br>
+ <div class="head6"><b>Contact Us</b></div>
+ <br>
+ <img src="images/lastpage1.jpg" class="pic1-img">
+ <br>
+
+ <div class="contacts">
+ <p>Phone:</p>
+</div>
+<p class="info">086 991 4780 / 062 586 4796</p>
+
+<div class="contacts">
+ <p></p>Email:</p>
+</div>
+<p class="info">vukosi.testimony@gmail.com</p>
+
+<div class="contacts">
+ <p>Bookings:</p>
+</div>
+<p class="info"><a href="https://forms.gle/3rTVYvwdw5yucGzh7" class="book-here">Book Here</a></p>
+
+<div class="contacts">
+ <p>Social Media:</p>
+</div>
+<p>
+<img src="images/lastpage2.jpg" class="pic2-img">
+
+<img src="images/Instagram-icon-Logo-2016-present.jpg" class="instagram-logo">
+<a href="https://www.instagram.com/officialvukosisonokhiba/" class="vsk-insta">@officialvukosisonokhiba</a>
+<br>
+<img src="images/logo-youtube-png-clipart-11.jpg" class="youtube-logo">
+<a href="https://www.youtube.com/@officialvukosisonokhiba" class="vsk-youtube">@officialvukosisonokhiba</a>
+<br>
+<img src="images/facebook-social-media-logo-symbol-app-icon-free-vector.jpg" class="facebook-logo">
+<a href="https://www.facebook.com/people/officialvukosisonokhiba/61554883198078/?mibextid=wwXIfr&rdid=ilbIx7EvHqQP0Tia&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1XhX9xjBYY%2F%3Fmibextid%3DwwXIfr" class="vsk-fb">officialvukosisonokhiba</a>
+<br>
+<img src="images/tiktok-logo-icon.jpg" class="tiktok-logo">
+<p class="info"><a href="https://www.tiktok.com/@vukosisonokhiba?_t=zm-8xyx3ztnlvk&_r=1" class="vsk-tiktok">officialvukosisonokhiba</a></p>
+
+
+<img src="images/Logowebsiteovsk.jpg" alt="OVSK logo" class="OVSK-logo">
+
+</body>
+</html>
