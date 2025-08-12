@@ -345,7 +345,7 @@
 <div class="slide-container">
   <img src="images/Womens conference.jpg" class="slide active">
   <img src="images/worship night.jpg" class="slide">
-
+  <img src="images\womensconferencesandton.jpg" class="slide">
 </div>
 <script>
   let autoIndex = 0;
@@ -355,7 +355,7 @@
     autoSlides.forEach(slide => slide.classList.remove("active"));
     autoSlides[autoIndex].classList.add("active");
     autoIndex = (autoIndex + 1) % autoSlides.length;
-    setTimeout(autoShowSlides, 3000); // Change slide every 3 seconds
+    setTimeout(autoShowSlides, 4000); // Change slide every 4 seconds
   }
 
   window.onload = autoShowSlides;
@@ -500,4 +500,5 @@ We appreciate all forms of support, from prayer to sharing content. If you’d l
 
 </body>
 </html>
+
 
